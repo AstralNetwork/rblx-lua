@@ -1,5 +1,4 @@
 --
-local RS = game:GetService("ReplicatedStorage")
 local SS = game:GetService("StudioService")
 local UIS = game:GetService("UserInputService")
 local RES = game:GetService("RunService")
