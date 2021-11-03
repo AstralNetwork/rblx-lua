@@ -15,7 +15,7 @@ end
 function module:FindIntegerInRange(targetNumber: number, targetRange: number) --Get the n times of a digit from the number range.
 	local n = 0
 	for i= 1, targetRange do 
-		for c in tostring(i):gmatch"." do
+		for c in tostring(i):gmatch(".") do
 			if tonumber(c) == targetNumber then 
 				n+=1
 			else 
@@ -27,7 +27,6 @@ function module:FindIntegerInRange(targetNumber: number, targetRange: number) --
 end
 function module:FindFirstNumberInString(s: string)
 	local number = s:match("%d+")
-	print(number)
 	if number then
 		return tonumber(number)
 	else
@@ -36,7 +35,7 @@ function module:FindFirstNumberInString(s: string)
 end
 --
 function module:SplitString(s, remove)
-	local result = {};
+	local result = {}
 	for match in (s..remove):gmatch("(.-)"..remove) do
 		table.insert(result, match)
 	end
