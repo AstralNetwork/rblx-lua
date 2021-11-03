@@ -41,3 +41,5 @@ function module:SplitString(s, remove)
 	end
 	return result
 end
+
+return module
